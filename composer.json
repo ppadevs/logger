@@ -1,13 +1,11 @@
 {
-	"name" : "alvarga/logger",
+	"name" : "ppadevs/logger",
 	"description" : "Write log to database",
-	"homepage" : "https://github.com/alvarga/logger",
+	"homepage" : "https://github.com/ppadevs/logger",
 	"license" : "BSD-2-Clause",
 	"authors" : [{
-			"name" : "Alen Varga",
-			"email" : "perokc@gmail.com"
-		}
-	],
+		"name" : "ppadevs"
+	}],
 	"keywords" : [
 		"Log",
 		"logger"
@@ -18,11 +16,6 @@
 	"autoload" : {
 		"psr-4" : {
 			"Logger\\" : "src/Logger"
-		}
-	},
-	"autoload-dev" : {
-		"psr-4" : {
-			"Logger\\Tests\\" : "tests/Logger/Tests"
 		}
 	}
 }
