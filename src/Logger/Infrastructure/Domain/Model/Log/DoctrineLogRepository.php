@@ -4,6 +4,7 @@ namespace Logger\Infrastructure\Domain\Model\Log;
 use Logger\Domain\Model\Log\LogRepositoryInterface;
 use Logger\Domain\Model\Log\Log;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
+use Doctrine\Persistence\ManagerRegistry;
 
 class DoctrineLogRepository extends ServiceEntityRepository implements LogRepositoryInterface
 {
