@@ -3,12 +3,19 @@ namespace Logger\Infrastructure\Domain\Model\Log;
 
 use Logger\Domain\Model\Log\LogRepositoryInterface;
 use Logger\Domain\Model\Log\Log;
-use Doctrine\ORM\EntityRepository;
+use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 
-class DoctrineLogRepository extends EntityRepository implements LogRepositoryInterface
+class DoctrineLogRepository extends ServiceEntityRepository implements LogRepositoryInterface
 {
+	/** @var string */ 
     private $idTable;
-    
+	
+	public function __construct($idTable, ManagerRegistry $registry)
+	{
+	    $this->setIdTable($idTable);
+	    parent::__construct($registry, Log::class);
+	}
+	
     /**
      *
      * {@inheritDoc}
